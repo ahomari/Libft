@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 14:29:03 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/10 23:12:59 by ahomari          ###   ########.fr       */
+/*   Created: 2023/11/11 11:24:47 by ahomari           #+#    #+#             */
+/*   Updated: 2023/11/11 11:37:51 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int	ft_lstsize(t_list *lst)
 {
-	char	*ptr;
-
-	ptr = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
-	if (!ptr)
-		return (NULL);
-	ft_memcpy(ptr, s1, ft_strlen(s1));
-	ft_memcpy(ptr + ft_strlen(ptr), s2, ft_strlen(s2));
-	return (ptr);
+	int	i;
+	t_list	*current;
+	
+	current = lst;
+	i = 0;
+	while (current)
+	{
+		current = current->next;
+		i++;
+	}
+	return (i);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

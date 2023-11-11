@@ -1,42 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 14:29:03 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/10 23:12:59 by ahomari          ###   ########.fr       */
+/*   Created: 2023/11/11 14:22:38 by ahomari           #+#    #+#             */
+/*   Updated: 2023/11/11 14:23:58 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	char	*ptr;
-
-	ptr = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
-	if (!ptr)
-		return (NULL);
-	ft_memcpy(ptr, s1, ft_strlen(s1));
-	ft_memcpy(ptr + ft_strlen(ptr), s2, ft_strlen(s2));
-	return (ptr);
+	del(lst->content);
+	free(lst);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

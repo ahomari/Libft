@@ -6,7 +6,7 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:39:26 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/10 15:14:03 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/11 10:34:52 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new -> next = *lst;
 	*lst = new;
 }
-int main() {
+/* int main() {
     t_list *node1 = ft_lstnew("Node 1");
     t_list *node2 = ft_lstnew("Node 2");
 
@@ -40,3 +40,4 @@ int main() {
 
     return 0;
 }
+ */
