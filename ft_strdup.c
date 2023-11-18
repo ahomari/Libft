@@ -6,7 +6,7 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 00:31:01 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/05 13:14:47 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/17 17:18:32 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,3 @@ char	*ft_strdup(const char *s1)
 	ft_memcpy(ptr, s1, ft_strlen(s1));
 	return (ptr);
 }
-
-/* int	main (void)
-{
-	printf("%s", ft_strdup(""));
-} */

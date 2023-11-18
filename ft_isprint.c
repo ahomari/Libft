@@ -6,7 +6,7 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:31:37 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/02 15:39:33 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/16 10:21:23 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-
-/*int main()
-{
-    char x = 5;
-    printf("%d",  ft_isprint(x));
-}*/

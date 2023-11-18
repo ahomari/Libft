@@ -6,7 +6,7 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 23:03:43 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/10 23:13:24 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/18 12:09:13 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 		ptr = (char *)(s + i);
 	return (ptr);
 }
-/* int main(void)
-{                                                                 
-    char s[] = "ahmed ahmwd ahmrd ahmvd";
-    char c = 'm';
-    printf("%s", ft_strrchr(s, c));
-} */
-
-
-
-
-
-

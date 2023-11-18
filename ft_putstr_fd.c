@@ -6,7 +6,7 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:58:36 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/06 17:00:03 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/16 17:57:53 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (!s || fd < 0)
+		return ;
 	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);

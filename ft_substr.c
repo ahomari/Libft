@@ -6,7 +6,7 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 12:15:38 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/05 13:15:17 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/18 11:36:05 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
-/* int	main(void)
-{
-	char t[] = "";
-	
-	printf("%s", ft_substr(t, 1, 1));
-} */

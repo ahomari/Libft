@@ -6,7 +6,7 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 12:16:01 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/03 20:43:42 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/18 11:35:05 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (src_len);
 }
-/* int main(void)
-{
-    char t[] = "ahmed";
-    char s[] = "omari";
-
-    printf("%zu", ft_strlcpy(t, s, 3));
-} */

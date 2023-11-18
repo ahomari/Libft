@@ -6,7 +6,7 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 18:01:40 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/02 15:47:37 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/18 12:09:24 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
-/* int main (void)
-{
-    char c = 'A';
-    
-    printf("%c", ft_tolower(c));
-} */

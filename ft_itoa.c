@@ -6,13 +6,13 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 20:58:07 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/06 12:44:46 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/17 17:02:29 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_len_int(int n)
+static int	ft_len_int(int n)
 {
 	int	count;
 
@@ -32,7 +32,7 @@ int	ft_len_int(int n)
 	return (count);
 }
 
-char	*ft_converter(int n, char *ptr)
+static char	*ft_converter(int n, char *ptr)
 {
 	int		i;
 	int		check_negative;
@@ -69,10 +69,3 @@ char	*ft_itoa(int n)
 	ptr = ft_converter(n, ptr);
 	return (ptr);
 }
-
-/* int	main(void)
-{
-	char *s;
-	s = ft_itoa(-2147483648);
-	printf("%s", s);
-} */

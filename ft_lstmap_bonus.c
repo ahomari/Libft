@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 14:29:03 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/14 12:05:38 by ahomari          ###   ########.fr       */
+/*   Created: 2023/11/14 15:21:23 by ahomari           #+#    #+#             */
+/*   Updated: 2023/11/18 11:33:51 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*ptr;
+	t_list	*tmp;
+	t_list	*newlist;
 
-	ptr = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
-	if (!ptr)
+	if (!lst || !f || !del)
 		return (NULL);
-	ft_memcpy(ptr, s1, ft_strlen(s1));
-	ft_memcpy(ptr + ft_strlen(ptr), s2, ft_strlen(s2));
-	return (ptr);
+	newlist = NULL;
+	while (lst)
+	{
+		tmp = ft_lstnew(NULL);
+		if (!tmp)
+		{
+			ft_lstclear(&newlist, del);
+			return (NULL);
+		}
+		tmp->content = f(lst->content);
+		ft_lstadd_back(&newlist, tmp);
+		lst = lst->next;
+	}
+	return (newlist);
 }

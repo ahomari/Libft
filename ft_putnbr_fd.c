@@ -6,7 +6,7 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:13:29 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/06 17:36:24 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/17 17:05:03 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	if (fd < 0)
+		return ;
 	if (n == -2147483648)
 		write (fd, "-2147483648", 11);
 	else if (n < 0)
@@ -29,7 +31,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n % 10, fd);
 	}
 }
-/* int main(void)
-{
-	ft_putnbr_fd(-2147483648, 1);
-} */

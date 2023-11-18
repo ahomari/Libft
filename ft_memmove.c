@@ -6,7 +6,7 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 22:39:56 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/03 23:07:16 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/17 17:04:36 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	p_dst = dst;
 	p_src = src;
 	i = 0;
-	if (!dst && !src)
-		return (NULL);
+	if (dst == src)
+		return (dst);
 	if (p_dst > p_src)
 	{
 		while (len--)
@@ -40,12 +40,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-/* int main(void)
-{
-    char string[] = "qbcdefg";
-    char *d = string + 1;   //fgbcde
-    char *s = string + 3;   //defg
-    printf("%s\n", ft_memmove(d, s, 4));
-    printf("%s", memmove(d, s, 4));
-} */

@@ -6,13 +6,13 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:29:01 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/10 23:28:10 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/18 11:34:59 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	d;
@@ -21,6 +21,8 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	i = 0;
 	d = ft_strlen(dst);
 	s = ft_strlen(src);
+	if (!dst && dstsize == 0)
+		return (s);
 	if (dstsize < d)
 		return (dstsize + s);
 	dstsize = dstsize - d;
@@ -35,14 +37,3 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	}
 	return (d + s);
 }
-
-
-
-/* int main(void)
-{
-
-    char dst[] = "ahmed";
-    char src[] = "omari";
-    printf("%zu\n", ft_strlcat(dst, src, 18));
-
-} */

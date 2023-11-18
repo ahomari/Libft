@@ -6,26 +6,21 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 21:16:18 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/11 15:30:40 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/18 11:36:58 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-typedef struct	s_list
+# include <stdlib.h>
+# include <unistd.h>
+
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-
-# include <stdio.h>
-# include <stddef.h>
-# include <string.h>
-# include <stdlib.h>
-# include <unistd.h>
-
-
 
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
@@ -68,6 +63,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
-void 	ft_lstiter(t_list *lst, void (*f)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

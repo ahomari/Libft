@@ -6,7 +6,7 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:53:46 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/03 15:51:25 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/16 21:54:40 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-
-/* int main(void)
-{
-    printf("%d", ft_isalnum(6));
-} */

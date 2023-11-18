@@ -6,7 +6,7 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 18:15:12 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/03 14:55:37 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/17 17:17:32 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s + i);
 	return (NULL);
 }
-/* int main(void)
-{                                                                 
-    char s[] = "";
-    char c = 'm';
-    printf("%s", ft_strchr(s, c));
-} */

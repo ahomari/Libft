@@ -6,7 +6,7 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:28:27 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/02 15:40:29 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/17 17:04:03 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/*int main(void)
-{
-    char s1[] = "ahmed";
-    char s2[] = "ahMed";
-    
-    printf("%d", ft_memcmp(s1, s2, 3));
-}*/

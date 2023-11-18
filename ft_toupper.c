@@ -6,7 +6,7 @@
 /*   By: ahomari <ahomari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 17:54:40 by ahomari           #+#    #+#             */
-/*   Updated: 2023/11/02 15:47:55 by ahomari          ###   ########.fr       */
+/*   Updated: 2023/11/18 12:09:34 by ahomari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-/* int main(void)
-{
-
-    char c = 'R';
-
-    printf("%c", ft_toupper(c));
-} */
