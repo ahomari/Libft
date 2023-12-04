@@ -63,7 +63,7 @@ CC = cc
 RM = rm -f
 NAME = libft.a
 %.o: %.c libft.h
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+	${CC} ${FLAGS} -c $< -o $@
 
 ${NAME}: ${OBJS} 
 	${LIBC} ${NAME} ${OBJS}
